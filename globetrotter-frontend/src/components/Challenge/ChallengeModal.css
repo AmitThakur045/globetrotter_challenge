@@ -1,0 +1,141 @@
+.challenge-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.challenge-modal {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.challenge-modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.share-card {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.share-card-header {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.app-logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.share-card-content {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.share-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.score-display {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.score-highlight {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.challenge-text {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.share-card-footer {
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.invite-cta {
+    font-weight: 500;
+}
+
+.invite-options {
+    margin-top: 15px;
+}
+
+.invite-link-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.invite-link-input {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+.copy-link-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 0 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.whatsapp-share-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-share-button:hover {
+    background-color: #1ea952;
+}

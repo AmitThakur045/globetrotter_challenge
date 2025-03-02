@@ -1,0 +1,173 @@
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.loading-section {
+    text-align: center;
+    padding: 24px 0;
+    color: #666;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.games-played {
+    background-color: #ebf5ff;
+}
+
+.correct-answers {
+    background-color: #ecfdf5;
+}
+
+.accuracy {
+    background-color: #f5f3ff;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.correct-answers .stat-value {
+    color: #10b981;
+}
+
+.accuracy .stat-value {
+    color: #8b5cf6;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.challenge-button,
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.challenge-button {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.challenge-button:hover {
+    background-color: #2563eb;
+}
+
+.play-button {
+    background-color: #10b981;
+    color: white;
+    text-decoration: none;
+}
+
+.play-button:hover {
+    background-color: #059669;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+}
+
+.history-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+
+.history-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 16px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.games-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.games-table th,
+.games-table td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.games-table th {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.games-table tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.games-table tr:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions-container {
+        flex-direction: column;
+    }
+
+    .challenge-button,
+    .play-button {
+        width: 100%;
+    }
+}
