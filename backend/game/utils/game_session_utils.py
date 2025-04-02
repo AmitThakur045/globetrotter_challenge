@@ -43,3 +43,15 @@ class GameSessionUtils:
             return QuestionUtils.get_questions_by_game_session(game_instance)
         except GameSessionQuestionMapping.DoesNotExist:
             return None
+        
+    @staticmethod
+    def is_all_question_answer(game_instance: GameSession) -> bool:
+        """ return True if marked all question else False """
+        try:
+            is_marked = GameSessionQuestionMapping.objects.filter(
+                game_session=game_instance,
+                user_answer__isnull=True
+            )
+            return not len(is_marked) 
+        except BaseException:
+            return False

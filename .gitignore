@@ -25,3 +25,5 @@ dist-ssr
 
 
 myvenv
+.qodo
+*.pyc

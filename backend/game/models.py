@@ -57,6 +57,7 @@ class User(AbstractUser):
     password = models.CharField(max_length=100)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    highest_score = models.IntegerField(default=0, blank=None, db_column="highest_score")
 
     groups = models.ManyToManyField(
         "auth.Group",
@@ -71,3 +72,18 @@ class User(AbstractUser):
 
     def __str__(self):
         return "User: " + self.username
+
+class UserFriendMapping(models.Model):
+    id = models.AutoField(primary_key=True)
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name="main_user") 
+    follower = models.ForeignKey('User', on_delete=models.CASCADE, related_name="user_follower")
+
+    class meta:
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'follower'], name='unique_friend'),
+        ]
+
+    def __str__(self):
+        return "Friends Table: " + self.user.username + " - " + self.follower.username
+    
+
